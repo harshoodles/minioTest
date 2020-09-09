@@ -18,3 +18,4 @@ for i in range(1, n):
   for obj in objects:
       print( obj.object_name)
 
+# run this like $ python list-object.py bucketName
