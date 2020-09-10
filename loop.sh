@@ -4,6 +4,7 @@
 
 #data=( $(grep . output1.txt |cut -d= -f2) )
 
+UPLOAD_TO_TARGET=$1
 
 python list-object.py bucket01 > output2.txt
 
@@ -14,10 +15,18 @@ while read -r line; do
 
 done < "$filename"
 
+if [ $UPLOAD_TO_TARGET = "true" ]
+then
+
 filename=output2.txt
 while read -r line; do
     name="$line"
   python file-uploader.py $name
 
 done < "$filename"
+echo "Uploaded in Target MinIO"
 
+else
+
+	echo "Downloaded Successfully!!"
+fi
