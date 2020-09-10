@@ -1,2 +1,0 @@
-bucket01
-test
