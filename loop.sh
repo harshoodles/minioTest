@@ -6,12 +6,12 @@
 
 UPLOAD_TO_TARGET=$1
 
-python list-object.py bucket01 > output2.txt
+python3 list-object.py bucket01 > output2.txt
 
 filename=output2.txt
 while read -r line; do
     name="$line"
-  python file-downloader.py $name
+  python3 file-downloader.py $name
 
 done < "$filename"
 
@@ -21,7 +21,7 @@ then
 filename=output2.txt
 while read -r line; do
     name="$line"
-  python file-uploader.py $name
+  python3 file-uploader.py $name
 
 done < "$filename"
 echo "Uploaded in Target MinIO"
