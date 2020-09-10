@@ -24,7 +24,7 @@ while read -r line; do
   python3 file-uploader.py $name
 
 done < "$filename"
-echo "Uploaded in Target MinIO"
+#echo "Uploaded in Target MinIO"
 
 else
 

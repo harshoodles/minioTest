@@ -1,3 +1,5 @@
 output1.txt
 output2.txt
 .gitignore
+minIO/
+.*

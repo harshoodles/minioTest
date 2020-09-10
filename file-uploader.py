@@ -22,6 +22,6 @@ n = len(sys.argv)
 for i in range(1, n):
 # Put an object 'pumaserver_debug.log' with contents from 'pumaserver_debug.log'.
  try:
-       minioClient.fput_object('targetbucket', sys.argv[i], '/home/harsh/snap/minIO/%s' %sys.argv[i])
+       minioClient.fput_object('targetbucket', sys.argv[i], './minIO/%s' %sys.argv[i])
  except ResponseError as err:
        print(err)
